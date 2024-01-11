@@ -1,0 +1,165 @@
+@font-face {
+    font-family: TOP-font;
+    src: url(./fonts/Norse-Bold.otf);
+  }
+  
+  :root {
+    --font-color: black;
+    --right-right-bg-color: #111827;
+    --form-right-bg-color: #1f2937;
+    --left-bg-color: white;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  #container {
+    display: flex;
+    min-height: 100vh;
+    color: var(--font-color);
+  }
+  
+  #left {
+    width: 505px;
+    background-color: var(--left-bg-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("https://www.theodinproject.com/assets/home-isometric-68a769acd8c1f2c43991e3d6b24c658bf5e78b59fbca20aba5c7a97850948269.svg");
+    position: relative;
+  }
+  
+  #bg-image {
+    height: 150px;
+    width: 100px;
+  }
+  
+  #logo {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.7);
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+  }
+  
+  #logo-text {
+    font-family: TOP-font;
+    font-size: 100px;
+    color: white;
+  }
+  
+  #right {
+    width: calc(100% - 505px);
+    background-color: var(--right-bg-color);
+    position: relative;
+    padding-bottom: 32px;
+  }
+  
+  #right > header {
+    padding-top: 55px;
+    padding-left: 45px;
+    padding-right: 100px;
+  }
+  
+  #right header p,
+  legend {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  
+  #right header p:last-child {
+    margin-top: 20px;
+    margin-bottom: 55px;
+  }
+  
+  #form {
+    background-color: var(--form-bg-color);
+    padding-left: 45px;
+    padding-top: 20px;
+    box-shadow: 0.5px 10px 20px 5px rgba(0,0,0,0.49);;
+  }
+  
+  .row {
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+  
+  .row > div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  fieldset {
+    border: none;
+  }
+  
+  legend {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-size: 14px;
+    font-weight: 600;
+    padding-bottom: 5px;
+  }
+  
+  input {
+    height: 35px;
+    width: 250px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    outline-color: blue;
+  }
+
+  input:focus {
+    outline-color: 1px solid blue;
+  }
+
+  input:invalid {
+    outline-color: red;
+  }
+  
+  button {
+    margin-top: 32px;
+    margin-left: 45px;
+    margin-bottom: 35px;
+    width: 200px;
+    height: 45px;
+    font-weight: 900;
+    border-radius: 8px;
+    background-color: #ab8444;
+    border: none;
+    cursor: pointer;
+    color: var(--font-color);
+  }
+  
+  #log-in {
+    padding-left: 45px;
+  }
+  
+  #log-in > span {
+    color: #ab8444;
+    cursor: pointer;
+    margin-bottom: 32px;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+     :root {
+    --font-color: #e5e7eb;
+    --right-bg-color: #111827;
+    --left-bg-color: black;
+    --form-bg-color: #1f2937;
+    }
+  
+  }
